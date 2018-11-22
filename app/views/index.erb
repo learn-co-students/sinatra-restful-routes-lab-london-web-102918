@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html land="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Recipe Time</h1>
+
+    <%Recipe.all.each do |r|%>
+    <h2><%=r.name%></h2>
+    <p><%=r.ingredients%></p>
+    <p><%=r.cook_time%> minutes</p>
+    <a href="/recipes/<%= r.id %>">Show me this recipe<a>
+    <%end%>
+
+    <p><a href="/recipes/new">Want to create a new recipe?</a></p>
+
+  </body>
+</html>
